@@ -1,0 +1,247 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "paidTo",
+				"type": "address"
+			},
+			{
+				"internalType": "int256",
+				"name": "amount",
+				"type": "int256"
+			},
+			{
+				"internalType": "string",
+				"name": "typeOfExpense",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "note",
+				"type": "string"
+			}
+		],
+		"name": "addExpense",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "adr",
+						"type": "address"
+					}
+				],
+				"internalType": "struct SplitWiseBetaRelease.Friend",
+				"name": "friendInfo",
+				"type": "tuple"
+			}
+		],
+		"name": "addFriend",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "int256",
+				"name": "amountPaid",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "paidBy",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "paidTo",
+				"type": "address"
+			}
+		],
+		"name": "Transaction",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "addressToAccountMapper",
+		"outputs": [
+			{
+				"internalType": "int256",
+				"name": "balance",
+				"type": "int256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "expenses",
+		"outputs": [
+			{
+				"internalType": "int256",
+				"name": "amountPaid",
+				"type": "int256"
+			},
+			{
+				"internalType": "address",
+				"name": "paidBy",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "paidTo",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "typeOfExpense",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "note",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "addr",
+				"type": "address"
+			}
+		],
+		"name": "getExpenseByAddress",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "int256",
+						"name": "amountPaid",
+						"type": "int256"
+					},
+					{
+						"internalType": "address",
+						"name": "paidBy",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "paidTo",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "typeOfExpense",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "note",
+						"type": "string"
+					}
+				],
+				"internalType": "struct SplitWiseBetaRelease.Expense[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getLengthOfExpenses",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "addr",
+				"type": "address"
+			}
+		],
+		"name": "getTotal",
+		"outputs": [
+			{
+				"internalType": "int256",
+				"name": "",
+				"type": "int256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "addr",
+				"type": "address"
+			}
+		],
+		"name": "retriveFriends",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "adr",
+						"type": "address"
+					}
+				],
+				"internalType": "struct SplitWiseBetaRelease.Friend[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
